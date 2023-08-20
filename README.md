@@ -1,63 +1,27 @@
-# Nuxt 3 Minimal Starter
+# Portefolio-2
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Description
 
-## Setup
+Un portfolio organisé en slides pour présenter mes projets.
 
-Make sure to install the dependencies:
+Technologies utilisées :
+Nuxt 3 (vue & node), Typescript, Docker, Tailwind, Postcss, Splinetools (with treejs)
 
-```bash
-# npm
-npm install
+## Installation
 
-# pnpm
-pnpm install
+Créer un un .env à la racine :
 
-# yarn
-yarn install
+```
+EMAIL=
+PASSWORD=
+MYMAIL=
 ```
 
-## Development Server
+EMAIL et PASSWORD sont utilisés pour envoyer les messages sous forme de mail à MYMAIL
 
-Start the development server on `http://localhost:3000`:
+Après, on peut utiliser docker compose pour build et lancer le projet :
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
+cd protefolio-2 
+docker-compose up --build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

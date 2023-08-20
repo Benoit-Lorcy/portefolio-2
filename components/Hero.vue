@@ -1,7 +1,8 @@
 <template>
-  <Slide id="hero">
+  <Slide id="hero">\
     <div class="hero-background">
-      <img src="@/assets/img/hero/Hero.svg" alt="hero">
+      <img src="@/assets/img/hero/Hero2.svg" alt="hero" />
+
       <!--<heroBackground class="hero-img"/>-->
     </div>
     <div class="hero-text">
@@ -25,6 +26,10 @@
     img{
       @apply w-full;
     }
+
+    .hero-img{
+      @apply w-full;
+    }
   }
 
   .hero-text{
@@ -41,5 +46,9 @@
 </style>
 
 <script setup lang="ts">
+  const test2 = ref('')
 
+  onMounted(() => {
+    test2.value = '/Hero2.svg';
+  })
 </script>

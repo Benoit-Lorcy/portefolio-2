@@ -2,9 +2,7 @@
   <div class="h-screen">
     <Transition >
       <div v-if="loading" class="fixed left-0 top-0 h-full w-full z-50 bg-black flex justify-center items-center">
-        <client-only>
-          <Loader />
-        </client-only>
+        <Loader />
       </div>
     </Transition>
     <NuxtLayout>
@@ -28,6 +26,12 @@
 
 <script setup lang="ts">
   import Loader from "~/components/Loader.vue";
+
+  useHead({
+    title: 'Portfolio',
+    meta: [{ name: 'Portfolio', content: 'My amazing portfolio made with love' }],
+    link: [{ rel: 'icon', type: 'image/svg', href: '/MenuIcon.svg' }],
+  })
 
   const nuxtApp = useNuxtApp();
   const loading = useLoading();

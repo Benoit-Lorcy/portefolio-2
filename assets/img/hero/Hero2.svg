@@ -1,6 +1,6 @@
 <svg width="1920" height="702" viewBox="0 0 1920 702" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g clip-path="url(#clip0_277_873)">
-        <mask id="mask0_277_873" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="3840" height="703" >
+        <mask id="mask0_277_873" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="3840" height="703" class="hero-mask">
             <path class="hero-mask" d="M3840 20.45V681.85C3704.77 666.88 3569.49 661.4 3434.26 661.4C3064.76 661.4 2695.24 702.3 2325.74 702.3C2190.47 702.3 2055.27 696.83 1920 681.85C1784.77 666.88 1649.49 661.4 1514.26 661.4C1144.76 661.4 775.24 702.3 405.74 702.3C270.47 702.3 135.27 696.82 0 681.85V20.45C135.23 35.42 270.51 40.9 405.74 40.9C775.24 40.9 1144.76 0 1514.26 0C1649.53 0 1784.73 5.48 1920 20.45C2055.23 35.42 2190.51 40.9 2325.74 40.9C2695.24 40.9 3064.76 0.01 3434.26 0C3569.53 0 3704.73 5.48 3840 20.45Z" fill="#D9D9D9"/>
         </mask>
         <g mask="url(#mask0_277_873)" >

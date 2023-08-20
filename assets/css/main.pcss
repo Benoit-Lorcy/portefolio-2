@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+body{
+    color: white;
+}
+
+h2{
+    @apply text-6xl font-semibold;
+}
+
+h3{
+    @apply text-2xl font-semibold;
+}
+
+.pcontainer {
+    @apply max-w-5xl container flex m-auto p-6 flex-col items-center justify-center md:flex-row;
+    color: white;
+    height: 70vh;
+}
+
+.project-container{
+    @apply max-w-5xl container flex m-auto p-6 flex-col items-center justify-center;
+    color: white;
+    height: 70vh;
+
+    .content{
+        @apply w-full flex m-auto flex-col md:flex-row;
+    }
+
+    .description{
+        @apply md:pl-20 w-full;
+
+        .logos,p{
+            @apply mb-6 md:mb-20;
+        }
+    }
+
+    .images{
+        @apply w-full flex flex-col;
+    }
+
+    .logo-container{
+        @apply flex justify-center mb-12 md:mb-24 ;
+    }
+
+    .img-container{
+        width: 28rem;
+        max-width: calc(100vw - 70px);
+        aspect-ratio: 16/9;
+        @apply mx-auto;
+        margin-bottom: 70px;
+
+        img{
+            @apply absolute first-of-type:-m-7 last-of-type:m-7;
+            width: 28rem;
+            max-width: calc(100vw - 70px);
+        }
+    }
+
+    @screen md {
+        .img-container{
+            max-width: calc(50vw - 70px);
+            img{
+                max-width: calc(50vw - 70px);
+            }
+        }
+    }
+
+    p{
+        @apply text-center md:text-left;
+    }
+
+    h2{
+        @apply mb-24 hidden md:block;
+    }
+
+    h3{ @apply mb-5 hidden md:block }
+
+    .logos{
+        @apply flex flex-row space-x-6 justify-center md:justify-start;
+
+        img{
+            @apply hover:opacity-75 transition-all duration-200;
+        }
+    }
+
+    .links{
+        @apply flex justify-center space-x-8 flex-row md:justify-between;
+
+        img {
+            @apply w-9 md:w-auto hover:opacity-75 transition-all duration-200;
+        }
+    }
+}
+
+
+/*@font-face {
+    font-family: Montserrat;
+    src: url("assets/fonts/Montserrat-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("assets/fonts/Montserrat-Bold.ttf");
+    font-weight: bold;
+}*/

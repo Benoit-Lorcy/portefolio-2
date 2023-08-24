@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <span>© Copyright Benoit Lorcy 2023</span>
+    <span class="copyright">© Copyright Benoit Lorcy 2023</span>
   </Slide>
 </template>
 
@@ -64,7 +64,7 @@ form{
 
 h3{ @apply mb-5; }
 
-span{
+.copyright{
   @apply absolute bottom-1 opacity-30;
 }
 </style>
@@ -85,7 +85,7 @@ async function submitForm() {
         message: message.value
       }
     })
-    formResponse.value = "Thanks for the message !"
+    formResponse.value = "Thanks for your message !"
     name.value = ''
     email.value = ''
     message.value = ''

@@ -1,9 +1,9 @@
 import {createTransport} from 'nodemailer'
 export default defineEventHandler (async (event) => {
-
     const { name, email, message } = await readBody(event);
-
+    const runtimeConfig = useRuntimeConfig()
     console.log(`${name} ${email} ${message}`)
+    console.log(runtimeConfig.mail)
 
     // Create a transport object
     let transporter = createTransport({
@@ -11,15 +11,15 @@ export default defineEventHandler (async (event) => {
         port: 465,
         secure: true,
         auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD
+            user: runtimeConfig.mail,
+            pass: runtimeConfig.password
         }
     })
 
     // Email options
     let mailOptions = {
-        from: process.env.EMAIL,
-        to: process.env.MYMAIL,
+        from: runtimeConfig.mail,
+        to: runtimeConfig.myMail,
         subject: `New message from ${name}`,
         text: message
     }
@@ -29,10 +29,11 @@ export default defineEventHandler (async (event) => {
         transporter.sendMail(mailOptions, resolve);
     })
 
+    console.log(error)
+
     if (error) {
         throw createError({
-            statusCode: 400,
-            statusMessage: <string>error
+            statusCode: 400
         })
     } else {
         return 'Email sent successfully!';

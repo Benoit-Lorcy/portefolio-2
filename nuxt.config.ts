@@ -8,5 +8,10 @@ export default defineNuxtConfig({
       'tailwindcss/nesting': 'postcss-nesting',
       'postcss-custom-media': {}
     }
+  },
+  runtimeConfig: {
+    mail: process.env.EMAIL,
+    password: process.env.PASSWORD,
+    myMail: process.env.MYMAIL
   }
 });

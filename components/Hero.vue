@@ -1,5 +1,5 @@
 <template>
-  <Slide id="hero">\
+  <Slide id="hero">
     <div class="hero-background">
       <img src="@/assets/img/hero/Hero2.svg" alt="hero" />
 

@@ -5,6 +5,7 @@
         <Loader />
       </div>
     </Transition>
+    <Rotation v-if="isMobile" />
     <NuxtLayout>
       <NuxtLoadingIndicator />
       <NuxtPage />
@@ -39,4 +40,17 @@
   nuxtApp.hook("app:beforeMount", () => {
     loading.value = true;
   });
+
+  nuxtApp.hook("app:mounted", () => {
+    loading.value = false;
+  });
+
+  const isMobile = ref(false);
+
+  onMounted(() => {
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      isMobile.value = true;
+    }
+  })
+
 </script>

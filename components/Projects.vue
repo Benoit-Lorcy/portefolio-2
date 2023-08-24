@@ -5,9 +5,9 @@
         <h2>Projects</h2>
       </div>
       <div class="projects-cube">
-        <div class="cube-container">
-          <canvas ref="canvas3d" />
-        </div>
+          <client-only>
+            <Cube />
+          </client-only>
       </div>
     </div>
   </Slide>
@@ -20,39 +20,21 @@
     height: 70vh;
 
     .projects-title{
-      @apply w-full flex items-center justify-center;
+      @apply w-full md:w-1/2 flex items-center justify-center;
 
       h2{
-        @apply text-4xl  md:text-6xl font-semibold;
+        @apply text-4xl  md:text-6xl font-semibold mb-2;
       }
     }
 
     .projects-cube{
-      @apply w-full flex items-center justify-center;
+      @apply w-full md:w-1/2 flex items-center justify-center;
     }
-  }
-
-
-  .cube-container{
-    aspect-ratio: 1/1;
-    margin: -10px;
   }
 
 </style>
 
 <script setup lang="js">
-  import { Application } from '@splinetool/runtime';
-  const canvas3d = ref(null);
 
-  const loading = useLoading();
-
-  const response = await fetch('/scene.splinecode');
-  const array = await response.arrayBuffer();
-
-  onMounted(async () => {
-    const app = new Application(canvas3d.value);
-    await app.start(array);
-    loading.value = false;
-  });
 </script>
 

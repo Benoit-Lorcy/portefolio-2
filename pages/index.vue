@@ -65,7 +65,7 @@
     })
   })
 
-  function handleMove(event){
+  function handleMove(event : any){
     lastTouch = event.changedTouches[0].clientY;
     const touchDiff = firstTouch - lastTouch;
     if(touchDiff > 50 && currentSlide < totalSlides.value - 1){

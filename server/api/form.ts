@@ -1,4 +1,4 @@
-import {createTransport} from 'nodemailer'
+/*import {createTransport} from 'nodemailer'
 export default defineEventHandler (async (event) => {
     const { name, email, message } = await readBody(event);
     const runtimeConfig = useRuntimeConfig()
@@ -38,4 +38,28 @@ export default defineEventHandler (async (event) => {
     } else {
         return 'Email sent successfully!';
     }
-})
+})*/
+
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export default defineEventHandler(async (event) => {
+
+    const { name, email, message } = await readBody(event);
+    const runtimeConfig = useRuntimeConfig()
+    console.log(`${name} ${email} ${message}`)
+
+    try {
+        const data = await resend.emails.send({
+        from: 'onboarding@resend.dev',
+        to: ['benoit.lorcy@gmail.com'],
+        subject: name + "sent you a message!",
+        html: message,
+        });
+
+        return data;
+    } catch (error) {
+        return { error };
+    }
+});

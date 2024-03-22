@@ -32,6 +32,7 @@
     "@types/three": "^0.155.1",
     "nodemailer": "^6.9.4",
     "pinia": "^2.1.6",
+    "resend": "^3.2.0",
     "three": "^0.155.0"
   }
 }

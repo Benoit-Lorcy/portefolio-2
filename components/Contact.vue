@@ -5,9 +5,9 @@
         <img src="@/assets/img/contact/contact.svg" alt="circle">
         <h2>Contact me</h2>
       </div>
-      <div class="description" @submit.prevent="submitForm">
+      <div class="description">
         <h3>Form</h3>
-          <form>
+          <form @submit.prevent="submitForm"> 
             <input v-model="name" placeholder="Your name">
             <input v-model="email" type="email" placeholder="Your email">
             <textarea v-model="message" placeholder="Your message" maxlength="300" rows="4" required></textarea>
@@ -77,6 +77,7 @@ const formResponse = ref('')
 
 async function submitForm() {
   try {
+
     const response = await $fetch('/api/form', {
       method: 'POST',
       body: {

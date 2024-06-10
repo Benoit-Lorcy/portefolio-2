@@ -1,7 +1,7 @@
 <template>
   <Slide id="hero">
     <div class="hero-background">
-      <img src="@/assets/img/hero/Hero2.svg" alt="hero" />
+      <img src="/Hero4.svg" alt="hero" />
 
       <!--<heroBackground class="hero-img"/>-->
     </div>
@@ -16,39 +16,40 @@
 </template>
 
 <style lang="postcss">
-  #hero{
-    @apply w-screen overflow-hidden;
+#hero {
+  @apply w-screen overflow-hidden;
+}
+
+.hero-background {
+  @apply min-w-max pl-48 md:p-0 md:w-full;
+
+  img {
+    @apply w-full;
   }
 
-  .hero-background{
-    @apply min-w-max pl-48 md:p-0 md:w-full;
+  .hero-img {
+    @apply w-full;
+  }
+}
 
-    img{
-      @apply w-full;
-    }
+.hero-text {
+  @apply absolute right-5 pb-52 md:right-auto md:pl-80 md:pb-52;
 
-    .hero-img{
-      @apply w-full;
-    }
+  span {
+    @apply text-white;
   }
 
-  .hero-text{
-    @apply absolute right-5 pb-52 md:right-auto md:pl-80 md:pb-52;
-
-    span{
-      @apply text-white;
-    }
-
-    h1, h2 {
-      @apply text-white font-semibold text-2xl sm:text-3xl md:text-6xl;
-    }
+  h1,
+  h2 {
+    @apply text-white font-semibold text-2xl sm:text-3xl md:text-6xl;
   }
+}
 </style>
 
 <script setup lang="ts">
-  const test2 = ref('')
+const test2 = ref('')
 
-  onMounted(() => {
-    test2.value = '/Hero2.svg';
-  })
+onMounted(() => {
+  test2.value = '/Hero2.svg';
+})
 </script>

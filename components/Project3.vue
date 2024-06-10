@@ -25,12 +25,15 @@
           <div class="links">
             <div class="source">
               <h3>Source code</h3>
-              <a href="https://github.com/Benoit-Lorcy/project-echouage"><img src="@/assets/img/socials/github.svg" alt="github logo" title="github"></a>
+              <a href="https://github.com/Benoit-Lorcy/project-echouage"><img src="@/assets/img/socials/github.svg"
+                  alt="github logo" title="github"></a>
             </div>
+            <!--
             <div class="website">
               <h3>Website</h3>
               <a href="https://front.echouage.lorcy.dev"><img src="@/assets/img/socials/link.svg" alt="link logo" title="link"></a>
             </div>
+          -->
           </div>
         </div>
       </div>
@@ -39,9 +42,9 @@
 </template>
 
 <style scoped lang="postcss">
-  span{
-    @apply text-4xl md:text-2xl font-semibold;
-  }
+span {
+  @apply text-4xl md:text-2xl font-semibold;
+}
 </style>
 
 <script setup lang="ts">

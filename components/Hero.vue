@@ -50,6 +50,6 @@
 const test2 = ref('')
 
 onMounted(() => {
-  test2.value = '/Hero2.svg';
+  test2.value = '/Hero4.svg';
 })
 </script>

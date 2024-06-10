@@ -7,19 +7,22 @@
       </div>
       <div class="description">
         <h3>Form</h3>
-          <form @submit.prevent="submitForm"> 
-            <input v-model="name" placeholder="Your name">
-            <input v-model="email" type="email" placeholder="Your email">
-            <textarea v-model="message" placeholder="Your message" maxlength="300" rows="4" required></textarea>
-            <button type="submit">Submit</button>
-            <span v-if="formResponse != ''">{{formResponse}}</span>
-          </form>
+        <form @submit.prevent="submitForm">
+          <input v-model="name" placeholder="Your name">
+          <input v-model="email" type="email" placeholder="Your email">
+          <textarea v-model="message" placeholder="Your message" maxlength="300" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+          <span v-if="formResponse != ''">{{ formResponse }}</span>
+        </form>
         <h3>Socials</h3>
         <div class="logos">
-          <a href="https://www.linkedin.com/in/benoit-lorcy/"><img src="@/assets/img/socials/linkedin.svg" alt="linkedin" title="linkedin"></a>
-          <a href="https://github.com/Benoit-Lorcy"><img src="@/assets/img/socials/github.svg" alt="github" title="github"></a>
-          <a href="https://www.instagram.com/benoit.lorcy"><img src="@/assets/img/socials/instagram.svg" alt="instagram" title="instagram"></a>
-          <a href="https://benoit.lorcy.info"><img src="@/assets/img/socials/link.svg" alt="link" title="link"></a>
+          <a href="https://www.linkedin.com/in/benoit-lorcy/"><img src="@/assets/img/socials/linkedin.svg" alt="linkedin"
+              title="linkedin"></a>
+          <a href="https://github.com/Benoit-Lorcy"><img src="@/assets/img/socials/github.svg" alt="github"
+              title="github"></a>
+          <a href="https://www.instagram.com/benoit.lorcy"><img src="@/assets/img/socials/instagram.svg" alt="instagram"
+              title="instagram"></a>
+          <a href="https://benoit.lorcy.dev"><img src="@/assets/img/socials/link.svg" alt="link" title="link"></a>
         </div>
       </div>
     </div>
@@ -28,43 +31,59 @@
 </template>
 
 <style scoped lang="postcss">
-#contact{
+#contact {
   @apply relative;
 }
 
-.title{
+.title {
   @apply w-full flex items-start items-center justify-center mb-5 md:mb-0;
 
-  h2{ @apply text-4xl  md:text-6xl font-semibold; }
+  h2 {
+    @apply text-4xl md:text-6xl font-semibold;
+  }
 
-  img{ @apply absolute -z-10 -rotate-90 w-1/2 md:w-auto; }
+  img {
+    @apply absolute -z-10 -rotate-90 w-1/2 md:w-auto;
+  }
 }
 
-.description{ @apply w-full flex flex-col justify-start items-start font-semibold;  }
+.description {
+  @apply w-full flex flex-col justify-start items-start font-semibold;
+}
 
-.logos{
+.logos {
   @apply flex flex-row space-x-6;
-  img{
+
+  img {
     @apply hover:opacity-75 transition-all duration-200
   }
 }
 
-form{
+form {
   @apply flex flex-col mb-5 md:mb-20 justify-start items-start w-full;
 
-  input, textarea, button{ @apply bg-transparent rounded-lg outline outline-2 outline-white py-1.5 px-2 mb-5; }
+  input,
+  textarea,
+  button {
+    @apply bg-transparent rounded-lg outline outline-2 outline-white py-1.5 px-2 mb-5;
+  }
 
-  input, textarea{
+  input,
+  textarea {
     @apply w-full;
     resize: none;
   }
 
-  button { @apply hover:opacity-90 hover:bg-white hover:text-black  transition-all delay-200; }
+  button {
+    @apply hover:opacity-90 hover:bg-white hover:text-black transition-all delay-200;
+  }
 }
 
-h3{ @apply mb-5; }
+h3 {
+  @apply mb-5;
+}
 
-.copyright{
+.copyright {
   @apply absolute bottom-1 opacity-30;
 }
 </style>

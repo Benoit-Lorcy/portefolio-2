@@ -27,7 +27,18 @@
         </div>
 
         <h3 class="mt-8 md:mt-16">Experiences</h3>
-
+        <div>
+          <span>
+            10-2023 <br>
+            10-2024 <br>
+            1 year
+          </span>
+          <p>
+            Corning Full Stack Developer Intern <br>
+            • Rewrote the project using React and Spring Boot <br>
+            • Collaborated with international teams
+          </p>
+        </div>
         <div>
           <span>
             09-2022 <br>
@@ -40,50 +51,39 @@
             • Integration of a mock-up in WordPress
           </p>
         </div>
-        <div>
-          <span>
-            07-2020 <br>
-            1 month
-          </span>
-          <p>
-            WordPress technician internship <br>
-            • Learning WordPress  <br>
-            • Using themes to create a showcase site
-          </p>
-        </div>
       </div>
     </div>
   </Slide>
 </template>
 
 <style scoped lang="postcss">
-.title{
+.title {
   @apply w-full flex items-start md:items-center justify-center mb-5 md:mb-0;
 
-  h2{
-    @apply text-4xl  md:text-6xl font-semibold;
+  h2 {
+    @apply text-4xl md:text-6xl font-semibold;
   }
 }
 
-img{
+img {
   @apply absolute -z-10;
   max-height: 80vh;
 }
 
 @screen md {
-  img{
+  img {
     margin-left: -30rem;
   }
 }
 
-.description{
+.description {
   @apply w-full items-center justify-center md:font-semibold;
 
-  div{
+  div {
     @apply flex flex-row mb-5;
   }
 
-  h3{
+  h3 {
     @apply mb-5 md:mb-10;
   }
 

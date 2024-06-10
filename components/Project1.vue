@@ -26,12 +26,15 @@
           <div class="links">
             <div class="source">
               <h3>Source code</h3>
-              <a href="https://github.com/Benoit-Lorcy/poll-app"><img src="@/assets/img/socials/github.svg" alt="github logo" title="github"></a>
+              <a href="https://github.com/Benoit-Lorcy/poll-app"><img src="@/assets/img/socials/github.svg"
+                  alt="github logo" title="github"></a>
             </div>
+            <!--
             <div class="website">
               <h3>Website</h3>
               <a href="https://poll.lorcy.dev/"><img src="@/assets/img/socials/link.svg" alt="link logo" title="link"></a>
             </div>
+            -->
           </div>
         </div>
       </div>
@@ -40,7 +43,7 @@
 </template>
 
 <style scoped lang="postcss">
-span{
+span {
   @apply text-2xl font-semibold;
 }
 </style>
